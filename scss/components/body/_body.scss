@@ -1,0 +1,28 @@
+@use '../abstract/components';
+@use '../abstract/colors';
+
+.hootHoot{
+    @extend %eyesOpen;
+
+    &__body{
+        height: 415px;
+        width: 400px;
+        background: colors.$hoothoot-body-color;
+        border-radius: 50%;
+        border: 3px solid colors.$border-pupil-color;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__belly{
+        width: 110%;
+        height: 100%;
+        background: colors.$hoothoot-belly;
+        border-radius: 50%;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translateX(-50%);
+        filter: blur(1px);
+    }
+}

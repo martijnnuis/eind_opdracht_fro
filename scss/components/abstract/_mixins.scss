@@ -1,0 +1,29 @@
+@use './colors';
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin basicEyes{
+    height: 170px;
+    width: 170px;
+    background: colors.$hoothoot-eye-color;
+    position: absolute;
+    border-radius: 50%;
+    top: 12%;
+    border: 20px solid colors.$border-pupil-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+@mixin eyelid{
+    position: absolute;
+    background: colors.$border-pupil-color;
+    width: 30px;
+    height: 50px;
+}

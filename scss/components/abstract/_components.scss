@@ -1,0 +1,10 @@
+@use './colors';
+
+%eyesOpen{
+        position: relative;
+    
+    &:hover > .hoothoot__eye > .hoothoot__shut{
+        transform: scaleY(0);
+    }
+}
+

@@ -1,0 +1,121 @@
+@use '../abstract/colors';
+@use '../abstract/mixins';
+@use '../abstract/components';
+
+.hootHoot__eye {
+    &--left {
+        @include mixins.basicEyes;
+        left: 9%;
+    }
+
+    &--right {
+        @include mixins.basicEyes;
+        right: 9%;
+    }
+}
+
+.hootHoot {
+    &__pupil {
+        width: 40px;
+        height: 40px;
+        background: colors.$border-pupil-color;
+        border-radius: 50%;
+    }
+
+    &__shut {
+        width: 100%;
+        height: 100%;
+        background: colors.$hoothoot-body-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        transform: scaleY(1);
+        transition: 0.5s all;
+        transform-origin: top center;
+        border-bottom: 5px solid colors.$border-pupil-color;
+    }
+
+    &__eyelid {
+        &--first {
+            @include mixins.eyelid;
+            top: 40%;
+            left: 10%;
+            transform: rotate(50deg);
+        }
+
+        &--second {
+            @include mixins.eyelid;
+            height: 55px;
+            left: 19%;
+            top: 48%;
+            transform: rotate(20deg);
+        }
+
+        &--third {
+            @include mixins.eyelid;
+            left: 33%;
+            top: 45%;
+            transform: rotate(-20deg);
+        }
+
+        &--fourth {
+            @include mixins.eyelid;
+            right: 33%;
+            top: 45%;
+            transform: rotate(20deg);
+        }
+
+        &--fifth {
+            @include mixins.eyelid;
+            height: 55px;
+            right: 19%;
+            top: 48%;
+            transform: rotate(-20deg);
+        }
+
+        &--sixth {
+            @include mixins.eyelid;
+            top: 40%;
+            right: 10%;
+            transform: rotate(-50deg);
+        }
+    }
+
+    &__eyebrow{
+        width: 25px;
+        height: 190px;
+        background: colors.$border-pupil-color;
+        position: absolute;
+        top: -11%;
+
+        &--left{
+            left: 35%;
+            transform: rotate(-50deg);
+        }
+
+        &--right{
+            right: 35%;
+            transform: rotate(50deg);
+        }
+    }
+
+    &__pointer{
+        width: 110px;
+        height: 160px;
+        background: colors.$border-pupil-color;
+        position: absolute;
+        clip-path: polygon(50% 0%, 100% 80%, 60% 100%, 40% 100%, 0% 80%);
+        top: -32%;
+
+        &--left{
+            left: -7%;
+            transform: rotate(-50deg);
+        }
+
+        &--right{
+            right: -7%;
+            transform: rotate(50deg);
+        }
+    }
+}
